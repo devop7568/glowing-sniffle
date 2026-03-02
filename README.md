@@ -36,7 +36,6 @@ Feature-rich Discord bot with unique social intelligence systems:
 - Current democracy executor stores proposals and tallies votes; extend with automated action handlers.
 
 
-## Token options
-- Option 1: set `bot_token` directly in `src/bot.py`.
-- Option 2: use `DISCORD_TOKEN` in environment/.env.
-- Direct `bot_token` takes precedence when set.
+## Token
+- Use `DISCORD_TOKEN` in `.env` or environment variables.
+- `src/bot.py` reads the token from config/env only.

@@ -14,7 +14,6 @@ from services.database import init_db
 async def main() -> None:
     load_dotenv()
     settings = load_settings()
-    bot_token = "PASTE_YOUR_BOT_TOKEN_HERE"  # direct token optional
 
     intents = discord.Intents.default()
     intents.message_content = True
@@ -37,11 +36,10 @@ async def main() -> None:
             await bot.tree.sync()
         print(f"Logged in as {bot.user}")
 
-    resolved_token = bot_token if bot_token != "PASTE_YOUR_BOT_TOKEN_HERE" else settings.token
-    if not resolved_token:
-        raise RuntimeError("Set token in src/bot.py bot_token or DISCORD_TOKEN env.")
+    if not settings.token:
+        raise RuntimeError("Set DISCORD_TOKEN in .env or environment.")
 
-    await bot.start(resolved_token)
+    await bot.start(settings.token)
 
 
 if __name__ == "__main__":
