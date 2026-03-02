@@ -30,11 +30,18 @@ async def main() -> None:
     async def on_ready() -> None:
         if settings.guild_id:
             guild = discord.Object(id=settings.guild_id)
+
             synced = await bot.tree.sync(guild=guild)
             print(f"Synced {len(synced)} guild command(s) to {settings.guild_id}")
         else:
             synced = await bot.tree.sync()
             print(f"Synced {len(synced)} global command(s)")
+
+            bot.tree.copy_global_to(guild=guild)
+            await bot.tree.sync(guild=guild)
+        else:
+            await bot.tree.sync()
+
         print(f"Logged in as {bot.user}")
 
     bot_token = "PASTE_YOUR_BOT_TOKEN_HERE"
@@ -42,6 +49,19 @@ async def main() -> None:
         raise RuntimeError("Set your bot token directly in src/bot.py")
 
     await bot.start(bot_token)
+
+
+
+    if not settings.token:
+
+        raise RuntimeError("Set DISCORD_TOKEN in .env or environment.")
+
+        raise RuntimeError("Set DISCORD_TOKEN in environment.")
+
+
+    await bot.start(settings.token)
+
+
 
 
 if __name__ == "__main__":

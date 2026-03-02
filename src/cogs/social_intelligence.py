@@ -62,6 +62,7 @@ class SocialIntelligence(commands.Cog):
         )
 
 
+
     @app_commands.command(name="vouchcount", description="Show how many vouches a member has")
     async def vouchcount(self, interaction: discord.Interaction, user: discord.Member) -> None:
         import aiosqlite
@@ -74,6 +75,7 @@ class SocialIntelligence(commands.Cog):
 
         vouch_total = count_row[0] if count_row else 0
         await interaction.response.send_message(f"{user.mention} has `{vouch_total}` vouch(es).")
+
 
     @commands.Cog.listener()
     async def on_message(self, message: discord.Message) -> None:
