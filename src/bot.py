@@ -42,6 +42,16 @@ async def main() -> None:
 
     await bot.start(bot_token)
 
+    if not settings.token:
+
+        raise RuntimeError("Set DISCORD_TOKEN in .env or environment.")
+
+        raise RuntimeError("Set DISCORD_TOKEN in environment.")
+
+
+    await bot.start(settings.token)
+
+
 
 if __name__ == "__main__":
     import asyncio
