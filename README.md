@@ -1,4 +1,8 @@
 
+# PulseGuard Discord Bot
+=======
+
+
 
 Feature-rich Discord bot with unique social intelligence systems:
 - Reputation Web (trust network graph)
@@ -15,7 +19,7 @@ Feature-rich Discord bot with unique social intelligence systems:
    - `python -m venv .venv`
    - `source .venv/bin/activate`
    - `pip install -r requirements.txt`
-
+ 
 
 
 4. Configure env vars (optional):
@@ -25,11 +29,14 @@ Feature-rich Discord bot with unique social intelligence systems:
    - `bot_token = "PASTE_YOUR_BOT_TOKEN_HERE"`
 6. Run:
 
+
+
 4. Configure env vars:
    - `DISCORD_TOKEN=...`
    - `DISCORD_GUILD_ID=...` (optional, for faster command sync)
    - `DATABASE_PATH=pulseguard.db` (optional)
 5. Run:
+
 
 
    - `python src/bot.py`
@@ -48,19 +55,24 @@ Feature-rich Discord bot with unique social intelligence systems:
 - Current democracy executor stores proposals and tallies votes; extend with automated action handlers.
 
 
-<-
 ## Token
 - Set token directly in `src/bot.py` via `bot_token`.
 - Environment `DISCORD_TOKEN` is not used for startup.
-=======
+
 
 ## Token
 - Set token directly in `src/bot.py` via `bot_token`.
 - Environment `DISCORD_TOKEN` is not used for startup.
-=======
+
+
+## Token
+- Set token directly in `src/bot.py` via `bot_token`.
+- Environment `DISCORD_TOKEN` is not used for startup.
+
 
 ## Token
 - Use `DISCORD_TOKEN` in `.env` or environment variables.
 - `src/bot.py` reads the token from config/env only.
+
 
 

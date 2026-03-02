@@ -61,7 +61,7 @@ class SocialIntelligence(commands.Cog):
             f"Suspicious mutual-vouching rings detected: `{'yes' if mutual_ring else 'no'}`"
         )
 
--
+
 
     @app_commands.command(name="vouchcount", description="Show how many vouches a member has")
     async def vouchcount(self, interaction: discord.Interaction, user: discord.Member) -> None:
