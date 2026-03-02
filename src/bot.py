@@ -37,7 +37,11 @@ async def main() -> None:
         print(f"Logged in as {bot.user}")
 
     if not settings.token:
+
+        raise RuntimeError("Set DISCORD_TOKEN in .env or environment.")
+=======
         raise RuntimeError("Set DISCORD_TOKEN in environment.")
+
 
     await bot.start(settings.token)
 

@@ -34,3 +34,11 @@ Feature-rich Discord bot with unique social intelligence systems:
 ## Notes
 - Role evolution requires roles named exactly: `Regular`, `Core Member`, `Veteran`.
 - Current democracy executor stores proposals and tallies votes; extend with automated action handlers.
+
+
+
+## Token
+- Use `DISCORD_TOKEN` in `.env` or environment variables.
+- `src/bot.py` reads the token from config/env only.
+=======
+
