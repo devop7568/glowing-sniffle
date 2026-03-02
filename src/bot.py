@@ -36,17 +36,16 @@ async def main() -> None:
             await bot.tree.sync()
         print(f"Logged in as {bot.user}")
 
-
     bot_token = "PASTE_YOUR_BOT_TOKEN_HERE"
     if bot_token == "PASTE_YOUR_BOT_TOKEN_HERE":
         raise RuntimeError("Set your bot token directly in src/bot.py")
 
     await bot.start(bot_token)
-=======
+
     if not settings.token:
 
         raise RuntimeError("Set DISCORD_TOKEN in .env or environment.")
-=======
+
         raise RuntimeError("Set DISCORD_TOKEN in environment.")
 
 

@@ -61,6 +61,22 @@ class SocialIntelligence(commands.Cog):
             f"Suspicious mutual-vouching rings detected: `{'yes' if mutual_ring else 'no'}`"
         )
 
+-
+
+    @app_commands.command(name="vouchcount", description="Show how many vouches a member has")
+    async def vouchcount(self, interaction: discord.Interaction, user: discord.Member) -> None:
+        import aiosqlite
+
+        async with aiosqlite.connect(self.db_path) as db:
+            count_row = await (await db.execute(
+                "SELECT COUNT(*) FROM reputations WHERE guild_id = ? AND target_id = ?",
+                (interaction.guild_id, user.id),
+            )).fetchone()
+
+        vouch_total = count_row[0] if count_row else 0
+        await interaction.response.send_message(f"{user.mention} has `{vouch_total}` vouch(es).")
+
+
     @commands.Cog.listener()
     async def on_message(self, message: discord.Message) -> None:
         if message.author.bot or not message.guild:
