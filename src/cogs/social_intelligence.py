@@ -63,6 +63,9 @@ class SocialIntelligence(commands.Cog):
 
 
 
+=======
+
+
     @app_commands.command(name="vouchcount", description="Show how many vouches a member has")
     async def vouchcount(self, interaction: discord.Interaction, user: discord.Member) -> None:
         import aiosqlite
