@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lua Obfuscation Hub</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">Complete Catalog</p>
+      <h1>Lua Obfuscation Hub</h1>
+      <p class="subtitle">
+        A full showcase of <strong>110 obfuscator variants</strong> (2 variants for each of 55 techniques)
+        and <strong>25 deobfuscator supports</strong> for educational comparison and analysis.
+      </p>
+      <div class="hero-stats">
+        <div>
+          <span id="obfCount">110</span>
+          <p>Obfuscator Variants</p>
+        </div>
+        <div>
+          <span id="techniqueCount">55</span>
+          <p>Core Techniques</p>
+        </div>
+        <div>
+          <span id="deobfCount">25</span>
+          <p>Deobfuscator Supports</p>
+        </div>
+      </div>
+      <a class="btn" href="#hosting">Best Free Hosting</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Obfuscator Technique Matrix (2 Each)</h2>
+      <p>Every technique below includes two implementation styles: <strong>Stealth</strong> and <strong>Aggressive</strong>.</p>
+      <div id="techniquesGrid" class="grid"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Deobfuscator Support (25)</h2>
+      <input id="searchBox" type="text" placeholder="Search deobfuscator support..." />
+      <ul id="deobfList" class="support-list"></ul>
+    </section>
+
+    <section id="hosting" class="panel highlight">
+      <h2>Recommended Free Hosting Provider</h2>
+      <p><strong>Cloudflare Pages</strong> is the best free choice for this site.</p>
+      <ul>
+        <li>Free static hosting with global CDN and HTTPS.</li>
+        <li>Simple GitHub integration for automatic deployment.</li>
+        <li>Excellent performance and custom domains on free plan.</li>
+      </ul>
+      <p>Alternative: GitHub Pages if you want simple repo-based hosting without extra setup.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Built for Lua obfuscation cataloging, auditing, and deobfuscation support tracking.</p>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
