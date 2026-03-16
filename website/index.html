@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lua Obfuscation Hub</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">Interactive Toolkit</p>
+      <h1>Lua Obfuscation Hub</h1>
+      <p class="subtitle">
+        Use <strong>110 obfuscator options</strong> (2 variants for each of 55 techniques)
+        and <strong>25 deobfuscator support modes</strong>. Paste Lua code, obfuscate it,
+        and recover supported formats directly in your browser.
+      </p>
+      <div class="hero-stats">
+        <div>
+          <span id="obfCount">110</span>
+          <p>Obfuscator Variants</p>
+        </div>
+        <div>
+          <span id="techniqueCount">55</span>
+          <p>Core Techniques</p>
+        </div>
+        <div>
+          <span id="deobfCount">25</span>
+          <p>Deobfuscator Supports</p>
+        </div>
+      </div>
+      <a class="btn" href="#hosting">Best Free Hosting</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Lua Playground (Working Tools)</h2>
+      <p class="muted">Tip: Click “Load Sample” to test quickly, then select any obfuscator.</p>
+
+      <div class="controls">
+        <button id="loadSample" class="btn ghost">Load Sample</button>
+        <button id="clearAll" class="btn ghost">Clear</button>
+      </div>
+
+      <label for="luaInput">Input Lua</label>
+      <textarea id="luaInput" rows="11" placeholder="Paste your Lua script here..."></textarea>
+
+      <div class="playground-grid">
+        <div>
+          <label for="obfuscatorSelect">Obfuscator (110)</label>
+          <select id="obfuscatorSelect"></select>
+          <button id="runObfuscate" class="btn full">Obfuscate</button>
+        </div>
+        <div>
+          <label for="deobfModeSelect">Deobfuscator Mode (25)</label>
+          <select id="deobfModeSelect"></select>
+          <button id="runDeobfuscate" class="btn full">Deobfuscate</button>
+        </div>
+      </div>
+
+      <label for="luaOutput">Output</label>
+      <textarea id="luaOutput" rows="13" placeholder="Output appears here..."></textarea>
+
+      <div class="controls">
+        <button id="copyOutput" class="btn ghost">Copy Output</button>
+        <button id="downloadOutput" class="btn ghost">Download .lua</button>
+      </div>
+
+      <p id="statusLine" class="status">Ready.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Obfuscator Technique Matrix (2 Each)</h2>
+      <p>Every technique includes two profiles: <strong>Stealth</strong> and <strong>Aggressive</strong>.</p>
+      <div id="techniquesGrid" class="grid"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Deobfuscator Support (25)</h2>
+      <input id="searchBox" type="text" placeholder="Search deobfuscator support..." />
+      <ul id="deobfList" class="support-list"></ul>
+    </section>
+
+    <section id="hosting" class="panel highlight">
+      <h2>Recommended Free Hosting Provider</h2>
+      <p><strong>Cloudflare Pages</strong> is the best free choice for this static toolkit.</p>
+      <ul>
+        <li>Free static hosting with global CDN + HTTPS.</li>
+        <li>GitHub integration with automatic deployments.</li>
+        <li>Fast edge caching and free custom domains.</li>
+      </ul>
+      <p>Alternative: GitHub Pages (also free and simple for static sites).</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>For educational analysis, code auditing, and Lua transformation testing.</p>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
