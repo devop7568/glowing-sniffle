@@ -3,66 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lua Obfuscation Hub</title>
+  <title>Rocket League Pro Lab | AI Coach</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Oxanium:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-  <header class="hero">
-    <div class="container">
-      <p class="eyebrow">Complete Catalog</p>
-      <h1>Lua Obfuscation Hub</h1>
-      <p class="subtitle">
-        A full showcase of <strong>110 obfuscator variants</strong> (2 variants for each of 55 techniques)
-        and <strong>25 deobfuscator supports</strong> for educational comparison and analysis.
-      </p>
-      <div class="hero-stats">
-        <div>
-          <span id="obfCount">110</span>
-          <p>Obfuscator Variants</p>
-        </div>
-        <div>
-          <span id="techniqueCount">55</span>
-          <p>Core Techniques</p>
-        </div>
-        <div>
-          <span id="deobfCount">25</span>
-          <p>Deobfuscator Supports</p>
-        </div>
-      </div>
-      <a class="btn" href="#hosting">Best Free Hosting</a>
-    </div>
+  <div class="arena-bg" aria-hidden="true"></div>
+
+  <header class="top-nav wrap">
+    <a class="brand" href="index.html">RL <span>PRO LAB</span></a>
+    <nav>
+      <a data-nav href="index.html">AI Coach</a>
+      <a data-nav href="skills.html">Skills Library</a>
+      <a data-nav href="training.html">Training</a>
+      <a data-nav href="grindmap.html">Grind Map</a>
+    </nav>
   </header>
 
-  <main class="container">
-    <section class="panel">
-      <h2>Obfuscator Technique Matrix (2 Each)</h2>
-      <p>Every technique below includes two implementation styles: <strong>Stealth</strong> and <strong>Aggressive</strong>.</p>
-      <div id="techniquesGrid" class="grid"></div>
+  <main class="wrap">
+    <section class="hero neon-panel">
+      <p class="eyebrow">NEXT LEVEL TRAINING</p>
+      <h1>Train Like a Rocket League Pro with a Built-In AI Assistant</h1>
+      <p>
+        This site is your personal esports command center: fast drills, pro-level routines,
+        and AI-generated coaching prompts to improve mechanics, speed, and game sense.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-main" href="skills.html">Open Skills Library</a>
+        <a class="btn btn-ghost" href="training.html">Start a Session</a>
+      </div>
+      <div class="stats-grid">
+        <article>
+          <h3>24/7</h3>
+          <p>AI coaching prompts ready anytime.</p>
+        </article>
+        <article>
+          <h3>4 Pages</h3>
+          <p>Built for a complete RL progression flow.</p>
+        </article>
+        <article>
+          <h3>Pro Path</h3>
+          <p>Mechanics + game IQ + consistency.</p>
+        </article>
+      </div>
     </section>
 
-    <section class="panel">
-      <h2>Deobfuscator Support (25)</h2>
-      <input id="searchBox" type="text" placeholder="Search deobfuscator support..." />
-      <ul id="deobfList" class="support-list"></ul>
-    </section>
+    <section class="grid-two">
+      <article class="neon-panel">
+        <h2>How to Use the AI Coach</h2>
+        <ol class="steps">
+          <li>Pick your rank and current weak point.</li>
+          <li>Ask for a 30-minute or 60-minute drill plan.</li>
+          <li>Train, save your replay, then ask for review points.</li>
+          <li>Track one focus mechanic each week.</li>
+        </ol>
+      </article>
 
-    <section id="hosting" class="panel highlight">
-      <h2>Recommended Free Hosting Provider</h2>
-      <p><strong>Cloudflare Pages</strong> is the best free choice for this site.</p>
-      <ul>
-        <li>Free static hosting with global CDN and HTTPS.</li>
-        <li>Simple GitHub integration for automatic deployment.</li>
-        <li>Excellent performance and custom domains on free plan.</li>
-      </ul>
-      <p>Alternative: GitHub Pages if you want simple repo-based hosting without extra setup.</p>
+      <article class="neon-panel">
+        <h2>Instant Prompt Builder</h2>
+        <p>Use this prompt with your AI assistant:</p>
+        <pre id="promptBox">Act as my Rocket League pro coach. I am [RANK].
+My biggest issue is [ISSUE].
+Give me a [30/60]-minute training routine,
+3 in-match goals, and a replay review checklist.</pre>
+        <button id="copyPrompt" class="btn btn-main small">Copy Prompt</button>
+      </article>
     </section>
   </main>
-
-  <footer>
-    <div class="container">
-      <p>Built for Lua obfuscation cataloging, auditing, and deobfuscation support tracking.</p>
-    </div>
-  </footer>
 
   <script src="assets/app.js"></script>
 </body>
