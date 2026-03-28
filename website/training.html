@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rocket League Pro Lab | Training</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Oxanium:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="arena-bg" aria-hidden="true"></div>
+
+  <header class="top-nav wrap">
+    <a class="brand" href="index.html">RL <span>PRO LAB</span></a>
+    <nav>
+      <a data-nav href="index.html">AI Coach</a>
+      <a data-nav href="skills.html">Skills Library</a>
+      <a data-nav href="training.html">Training</a>
+      <a data-nav href="grindmap.html">Grind Map</a>
+    </nav>
+  </header>
+
+  <main class="wrap page-stack">
+    <section class="neon-panel">
+      <h1>Dynamic Training Generator</h1>
+      <p>Generate a different routine each time based on rank, focus type, and session length.</p>
+
+      <div class="coach-controls">
+        <label>
+          Rank
+          <select id="planRank">
+            <option>Bronze</option>
+            <option>Silver</option>
+            <option>Gold</option>
+            <option>Platinum</option>
+            <option>Diamond</option>
+            <option>Champion</option>
+            <option>Grand Champion</option>
+            <option>Supersonic Legend</option>
+          </select>
+        </label>
+        <label>
+          Focus
+          <select id="planFocus">
+            <option>Ground Control</option>
+            <option>Aerial Attack</option>
+            <option>Defense</option>
+            <option>Speed & Recoveries</option>
+            <option>Game Sense</option>
+            <option>Mental Consistency</option>
+          </select>
+        </label>
+        <label>
+          Session
+          <select id="planLength">
+            <option value="30">30 Minutes</option>
+            <option value="45">45 Minutes</option>
+            <option value="60">60 Minutes</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="hero-actions">
+        <button id="generatePlan" class="btn btn-main">Generate Fresh Routine</button>
+      </div>
+
+      <div id="routineOutput" class="routine-output"></div>
+    </section>
+
+    <section class="neon-panel">
+      <h2>Pro Session Rules</h2>
+      <ul class="checklist">
+        <li>Warm up before queueing ranked.</li>
+        <li>Speak your decision before each challenge to avoid autopilot.</li>
+        <li>After session: write 3 mistakes, 2 fixes, 1 focus for next time.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
