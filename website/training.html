@@ -24,6 +24,7 @@
 
   <main class="wrap page-stack">
     <section class="neon-panel">
+
       <h1>Dynamic Training Generator</h1>
       <p>Generate a different routine each time based on rank, focus type, and session length.</p>
 
@@ -65,6 +66,13 @@
       <div class="hero-actions">
         <button id="generatePlan" class="btn btn-main">Generate Fresh Routine</button>
       </div>
+      <h1>Training Session Builder</h1>
+      <p>Pick your mode and generate a tough but clean routine.</p>
+      <div class="routine-controls">
+        <button class="routine-btn active" data-routine="30">30 Minutes</button>
+        <button class="routine-btn" data-routine="60">60 Minutes</button>
+        <button class="routine-btn" data-routine="ranked">Ranked Prep</button>
+      </div>
 
       <div id="routineOutput" class="routine-output"></div>
     </section>
@@ -75,6 +83,10 @@
         <li>Warm up before queueing ranked.</li>
         <li>Speak your decision before each challenge to avoid autopilot.</li>
         <li>After session: write 3 mistakes, 2 fixes, 1 focus for next time.</li>
+
+        <li>No autopilot: call out your decisions out loud.</li>
+        <li>End session with 1 replay and 3 learning notes.</li>
+
       </ul>
     </section>
   </main>

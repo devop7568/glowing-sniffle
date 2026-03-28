@@ -43,6 +43,7 @@ body {
   top: 0;
   background: rgba(4, 6, 18, 0.7);
   backdrop-filter: blur(8px);
+
   z-index: 10;
 }
 
@@ -132,19 +133,26 @@ p { color: var(--muted); }
   border: 1px solid var(--line);
 }
 
+
 .stats-grid,
 .mini-stats {
+.small { margin-top: 0.65rem; }
+
+.stats-grid {
   display: grid;
   gap: 0.7rem;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
 }
 
+
 .stats-grid article,
 .mini-stats article {
+.stats-grid article {
   background: rgba(8, 15, 35, 0.72);
   border: 1px solid rgba(109, 64, 255, 0.5);
   border-radius: 12px;
   padding: 0.8rem;
+
 }
 
 .stats-grid h3,
@@ -243,6 +251,74 @@ select {
 .skill-card p {
   margin: 0;
   font-size: 0.95rem;
+}
+
+}
+
+.stats-grid h3 {
+  color: var(--neon);
+  font-size: 1.4rem;
+}
+
+.grid-two {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 1rem;
+}
+
+.steps li,
+.checklist li {
+  margin: 0.45rem 0;
+  color: var(--text);
+}
+
+pre {
+  background: #070d24;
+  border: 1px solid #2341ae;
+  border-radius: 12px;
+  padding: 0.8rem;
+  color: #a8e8ff;
+  white-space: pre-wrap;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.65rem;
+}
+
+.skill-card {
+  border: 1px solid #2b55db;
+  background: #081130;
+  border-radius: 12px;
+  padding: 0.65rem;
+}
+
+.skill-card p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.tips-panel li { margin: 0.5rem 0; }
+
+.routine-controls {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.routine-btn {
+  border: 1px solid #2f49b7;
+  background: #0b1436;
+  color: var(--text);
+  padding: 0.5rem 0.8rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.routine-btn.active {
+  border-color: var(--neon);
+  box-shadow: 0 0 16px rgba(48, 214, 255, 0.35);
 }
 
 .routine-output {
