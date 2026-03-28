@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rocket League Pro Lab | Training</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Oxanium:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="arena-bg" aria-hidden="true"></div>
+
+  <header class="top-nav wrap">
+    <a class="brand" href="index.html">RL <span>PRO LAB</span></a>
+    <nav>
+      <a data-nav href="index.html">AI Coach</a>
+      <a data-nav href="skills.html">Skills Library</a>
+      <a data-nav href="training.html">Training</a>
+      <a data-nav href="grindmap.html">Grind Map</a>
+    </nav>
+  </header>
+
+  <main class="wrap page-stack">
+    <section class="neon-panel">
+      <h1>Training Session Builder</h1>
+      <p>Pick your mode and generate a tough but clean routine.</p>
+      <div class="routine-controls">
+        <button class="routine-btn active" data-routine="30">30 Minutes</button>
+        <button class="routine-btn" data-routine="60">60 Minutes</button>
+        <button class="routine-btn" data-routine="ranked">Ranked Prep</button>
+      </div>
+      <div id="routineOutput" class="routine-output"></div>
+    </section>
+
+    <section class="neon-panel">
+      <h2>Pro Session Rules</h2>
+      <ul class="checklist">
+        <li>Warm up before queueing ranked.</li>
+        <li>No autopilot: call out your decisions out loud.</li>
+        <li>End session with 1 replay and 3 learning notes.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
